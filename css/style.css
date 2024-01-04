@@ -59,34 +59,18 @@ input[type="button"]::-moz-focus-inner {
 button::-moz-focus-inner {
   border: 0;
 }
-
-/*font colors */
-/*font colors */
-/*menu*/
-/*menu left corner color and footer*/
-/*header*/
-/*   */
-/*
-#540f43 
-rgb(84,15,67)
-
-#ce8056
-rgb(206,128,86)
-
-#f18a60
-rgb(241,138,96)
-
-
-rgb(144,5,143)        #90058f
-rgb(160,21,159)        #a0159f
-rgb(192,53,191)        #c035bf
-rgb(240,101,239)        #f065ef
-*/
-/*colors for lines*/
-/* for lines must to be same as #c6 to hidde in same color with menu*/
-/* transparent for lines */
+html{
+  scroll-behavior: smooth;
+}
+:root{
+  --color0: #B9C9ED;
+  --color1: #FFFFFF;
+  --color2: #E4EBFB;
+  --color3: #8BA1D6;
+  --color4: #5D77B3;
+}
 body {
-  color: #333;
+  color: rgba(0, 0, 0, 0.5);
   font: 16px/1.5em Arial, Geneva, Tahoma, sans-serif;
   background: #fafafa;
   background: repeating-linear-gradient(45deg, rgba(200, 200, 200, 0.1) 300px, rgba(200, 200, 200, 0.3) 301px, rgba(200, 200, 200, 0.5) 1000px, rgba(200, 200, 200, 0.2) 1001px), repeating-linear-gradient(135deg, rgba(200, 200, 200, 0.2) 300px, rgba(200, 200, 200, 0.5) 301px, rgba(200, 200, 200, 0.2) 1000px, rgba(200, 200, 200, 0.1) 1001px);
@@ -106,9 +90,8 @@ a {
 #main a:hover, #main a:active {
   text-decoration: underline;
   color: #333;
-  -webkit-text-decoration-color: #bd2d61;
-  /* Safari */
-  text-decoration-color: #bd2d61;
+  -webkit-text-decoration-color: var(--color3);
+  text-decoration-color:  var(--color3);
   text-decoration-style: double;
 }
 
@@ -132,7 +115,7 @@ h1 {
   flex: 1;
   height: 2px;
   content: "";
-  background: #bd2d61;
+  background: var(--color3);
 }
 
 #leftcolumn h1:before {
@@ -232,11 +215,11 @@ p:last-child {
 #header {
   text-align: center;
   overflow: hidden;
-  background: #f27248;
+  background: var(--color4);
   height: 48px;
   width: 100%;
   position: relative;
-  background: linear-gradient(to bottom, #bd2d61 0px, #333 1px, #bd2d61 1px, #bd2d61 46px, #333 46px, #bd2d61 47px);
+  background: linear-gradient(to bottom, var(--color3) 0px, #333 1px, var(--color3) 1px, var(--color3) 46px, #333 46px, var(--color3) 47px);
 }
 
 #inheader {
@@ -277,16 +260,16 @@ p:last-child {
 }
 
 #nav {
-  background: #f18a60;
+  background: var(--color4);
   margin: 0 auto 0;
   overflow: hidden;
   width: 100%;
   z-index: 1;
   display: block;
-  border-bottom: 1px solid #f27248;
+  border-bottom: 1px solid var(--color4);
   position: relative;
   top: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40px, #e0376b 40px, #e0376b 42px, rgba(0, 0, 0, 0) 42px), linear-gradient(90deg, #f27248 50%, #f27248 50%, #f18a60 50%), linear-gradient(to bottom, #f18a60 40px, #333 40px, #333 42px, #f18a60 42px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40px, var(--color3) 40px, var(--color3)  42px, rgba(0, 0, 0, 0) 42px), linear-gradient(90deg, var(--color0) 50%, var(--color0) 50%, var(--color1) 50%), linear-gradient(to bottom, var(--color1) 40px, #333 40px, #333 42px, var(--color1) 42px);
 }
 
 #nav ul {
@@ -294,7 +277,7 @@ p:last-child {
   width: 960px;
   display: block;
   min-height: 48px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40px, #e0376b 40px, #e0376b 42px, rgba(0, 0, 0, 0) 42px), linear-gradient(135deg, #f27248 34px, #f18a60 34px, #f18a60 52px, #f27248 52px, #f27248 70px, #f18a60 70px, #f18a60 88px, #f27248 88px, #f27248 106px, #f18a60 106px, #f18a60 124px, #f27248 124px, #f27248 142px, #f18a60 142px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40px, var(--color3)  40px, var(--color3)  42px, rgba(0, 0, 0, 0) 42px), linear-gradient(135deg, var(--color0) 34px, var(--color1) 34px, var(--color1) 52px, var(--color0) 52px, var(--color0) 70px, var(--color1) 70px, var(--color1) 88px, var(--color0) 88px, var(--color0) 106px, var(--color1) 106px, var(--color1) 124px, var(--color0) 124px, var(--color0) 142px, var(--color1) 142px);
 }
 
 #nav a {
@@ -304,7 +287,7 @@ p:last-child {
   padding: 12px 14px;
   text-decoration: none;
   text-transform: lowercase;
-  color: #333;
+  color: var(--color4);
   font-size: 0.75em;
   line-height: 2;
   text-transform: uppercase;
@@ -326,7 +309,7 @@ p:last-child {
 }
 
 #nav a:hover {
-  color: #fafafa;
+  color: #333;
   text-shadow: none;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40px, white 40px, white 42px, rgba(0, 0, 0, 0) 42px);
 }
@@ -341,12 +324,12 @@ p:last-child {
   width: 24px;
   transform: skew(-45deg, 0deg);
   z-index: 2;
-  background: #f18a60;
+  background: var(--color4);
 }
 
 #lines {
   display: block;
-  border-top: 2px solid #f18a60;
+  border-top: 2px solid var(--color4);
   margin-top: 24px;
 }
 
@@ -356,7 +339,7 @@ p:last-child {
   width: 50%;
   position: relative;
   margin: 0 auto;
-  background: #f18a60;
+  background: var(--color4);
 }
 
 .logo {
@@ -372,7 +355,7 @@ p:last-child {
   position: relative;
   height: 48px;
   width: 120px;
-  background: #bd2d61 url(../img/log.svg) no-repeat center/40px;
+  background: var(--color2) url(../img/log.svg) no-repeat center/40px;
   display: block;
   margin: -24px auto 0;
 }
@@ -389,7 +372,7 @@ p:last-child {
 }
 
 #fot {
-  background: #bd2d61;
+  background: var(--color2);
   -webkit-box-shadow: 0px 1px 2px 0px #999;
   -moz-box-shadow: 0px 1px 2px 0px #999;
   box-shadow: 0px 1px 2px 0px #999;
@@ -547,8 +530,7 @@ table {
   text-align: center;
   height: 48px;
   width: 48px;
-  background: #f18a60;
-  background: #f18a60 url(../img/top.svg) center 8px no-repeat;
+  background: var(--color4);
   cursor: pointer;
   text-decoration: none;
   border: 0;
@@ -592,8 +574,8 @@ table {
   #burg {
     overflow: hidden;
     border-radius: 2px;
-    background: #bd2d61;
-    background: linear-gradient(to bottom, #bd2d61 0px, #333 1px, #333 1px, #333 46px, #333 46px, #bd2d61 47px);
+    background: var(--color2);
+    background: linear-gradient(to bottom, var(--color0) 0px, #333 1px, #333 1px, #333 46px, #333 46px, var(--color0) 47px);
     display: block;
     cursor: pointer;
     height: 48px;
@@ -733,11 +715,11 @@ table {
   #nav a, #nav li {
     float: none;
     width: 100%;
-    background: #f18a60;
-    border-bottom: 1px solid #f27248;
+    background: var(--color0);
+    border-bottom: 1px solid var(--color2);
   }
   #nav a:hover, #nav li:hover {
-    background: #f27248;
+    background: var(--color2);
   }
 
   .h240 {
