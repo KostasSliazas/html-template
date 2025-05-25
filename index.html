@@ -80,7 +80,18 @@
               <img src="img/fake-img.svg" alt="ok">
               <h1>Lorem ipsum</h1>
               <p>Lorem ipsum dolor sit amet, no sed euismod dolorum fuisset, nulla ancillae ne nec? Graecis dolores repudiandae ut vim, mea an delectus explicari? Ius an eirmod discere epicuri. Ad porro liber possit vel, has etiam aliquam contentiones at? Ius cu erat probatus patrioque, mollis virtute no est, nostro offendit vix an.
-              </p>
+              function capitalizeFirst(str) {
+		  if (typeof str !== 'string') return str;
+		  const lower = str.toLowerCase();
+		  return lower.charAt(0).toUpperCase() + lower.slice(1);
+		}
+		
+		document.querySelectorAll('input').forEach(input => {
+		  if (typeof input.value === 'string') {
+		    input.value = capitalizeFirst(input.value);
+		  }
+		});
+	      </p>
             </div>
             <div class="box">
               <img src="img/fake-img.svg" alt="ok">
