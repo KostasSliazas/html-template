@@ -1,0 +1,3 @@
+#rightcolumn,#leftcolumn,#nav ul li{display:inline;overflow:hidden;}
+#rightcolumn{width:312px;}
+#leftcolumn{width:624px;}
